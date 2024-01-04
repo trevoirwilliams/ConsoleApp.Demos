@@ -16,7 +16,6 @@ int GetFiveYearsAgo()
     return year;
 }
 
-
 // methods with parameters - represent data being passed into a method.
 void PrintNameWithParams(string name)
 {
