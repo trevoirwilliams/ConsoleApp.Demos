@@ -4,6 +4,7 @@ using ConsoleApp.ClassesDemo.Classes.PersonDemo;
 using ConsoleApp.ClassesDemo.Classes.ShapeDemo;
 
 Console.WriteLine("************* - Classes and Objects - *************");
+
 // Read more https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers 
 /* Define an object of type Person. this will be null by default. Without the new instance, it will give a null exception if it is used.
 */
@@ -13,21 +14,10 @@ Person person;
 // It is best to define and declare a new object. 
 Person baby = new Person();
 
-// Using the 
+// Using the . operator, we can access public properties and methods.
 baby.LastName = "Thompson";
 baby.FirstName = "Theresa";
 baby.DateofBirth = new DateOnly(2023, 10, 29);
-
-/*
- * Objects can be initialized like this alternatively, where the object's properties  are set all at once. 
-   Person baby = new Person
-   {
-       LastName = "Thompson",
-       FirstName = "Theresa",
-       DateofBirth = new DateOnly(2023, 10, 29)
-   };
- */
-
 baby.PrintFullName();
 baby.PrintInitials();
 baby.GenerateTaxNumber();
@@ -47,10 +37,15 @@ var person2IdNumber = person2.GetIdNumber();
 Console.WriteLine(person2IdNumber);
 
 // Using classes derived from the base class
-var teacher = new Teacher();
-teacher.LastName = "Thompson";
-teacher.FirstName = "Theresa";
-teacher.DateofBirth = new DateOnly(2023, 10, 29);
+/*
+ * Objects can be initialized like this alternatively, where the object's properties  are set all at once. 
+ */
+var teacher = new Teacher
+{
+    LastName = "Thompson",
+    FirstName = "Theresa",
+    DateofBirth = new DateOnly(2023, 10, 29)
+};
 
 teacher.PrintFullName();
 teacher.PrintInitials();
